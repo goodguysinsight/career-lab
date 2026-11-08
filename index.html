@@ -116,13 +116,42 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
 .dg h3{font-size:clamp(1.4rem,3vw,2rem)}.dg ul{padding-left:20px;display:grid;gap:6px;color:var(--mut)}
 .dg .btn{margin-top:8px}.fin .dg .btn.p{background:var(--ink);border-color:var(--ink)}.fin .dg .btn.p:hover{background:#000}
 @media(max-width:860px){.dg .btn{width:100%}}
+
+/* promoción de lanzamiento + servicios express */
+.promo{padding:0 0 clamp(56px,8vw,88px)}
+.promo-box{background:var(--ink);color:var(--cream);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;position:relative}
+.promo-copy{padding:clamp(28px,5vw,58px);display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.promo-kicker{font:700 .78rem var(--b);letter-spacing:.12em;text-transform:uppercase;color:#FF7BA3}
+.promo h2{max-width:16ch;font-size:clamp(2rem,4.4vw,3.5rem)}
+.promo-copy>p{color:#D9D1BD;max-width:49ch}
+.promo-points{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}
+.promo-points span{border:1px solid #5E5A52;border-radius:99px;padding:6px 11px;font-size:.82rem;color:#F2ECDE}
+.promo-side{background:var(--acc);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px}
+.promo-side .old{font-size:.9rem;text-decoration:line-through;opacity:.8}
+.promo-side .amount{font:800 clamp(3.5rem,8vw,5.8rem)/.95 var(--d);letter-spacing:-.06em}
+.promo-side .fine{font-size:.88rem;max-width:29ch;color:#fff;opacity:.92}
+.promo-side .btn{background:var(--ink);border-color:var(--ink);color:#fff;margin-top:8px}
+.promo-side .btn:hover{background:#000}
+.express{background:#fff}
+.express-intro{max-width:62ch;color:var(--mut);margin-top:14px}
+.express-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.express-card{border:1px solid var(--line);background:var(--cream);padding:22px;border-radius:6px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:210px}
+.express-card .mini{font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc-d)}
+.express-card h3{font-size:1.2rem}
+.express-card p{font-size:.91rem;color:var(--mut)}
+.express-card .price{font:700 1.55rem var(--d);margin-top:auto}
+.express-card a{font-size:.9rem;font-weight:700;color:var(--acc-d);text-decoration:none}
+.express-note{margin-top:20px;color:var(--mut);font-size:.9rem}
+@media(max-width:860px){.promo-box{grid-template-columns:1fr}.promo-side{align-items:flex-start}.express-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.express-grid{grid-template-columns:1fr}.express-card{min-height:180px}}
+
 </style>
 </head>
 <body>
 <header><div class="w">
  <a class="logo" href="#inicio">GOOD GUYS <span>CAREER</span></a>
  <button id="menu" aria-expanded="false" aria-controls="nav">Menú</button>
- <nav id="nav"><a href="#servicios">Servicios</a><a href="#metodo">Método</a><a href="#planes">Planes</a><a href="#diagnostico" class="btn p" style="padding:10px 18px">Diagnóstico</a></nav>
+ <nav id="nav"><a href="#servicios">Servicios</a><a href="#servicios-express">Servicios express</a><a href="#metodo">Método</a><a href="#planes">Planes</a><a href="#diagnostico" class="btn p" style="padding:10px 18px">Diagnóstico</a></nav>
 </div></header>
 <main>
 <section class="hero" id="inicio"><div class="w">
@@ -143,6 +172,29 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
  </svg>
 </div></section>
 
+
+<section class="promo" aria-label="Promoción de lanzamiento: diagnóstico de CV">
+ <div class="w">
+  <div class="promo-box">
+   <div class="promo-copy">
+    <span class="promo-kicker">Promoción de lanzamiento · Career Lab</span>
+    <h2>¿Tu CV está preparado para los filtros ATS?</h2>
+    <p>Antes de postular, descubre qué comunica tu CV, qué aspectos puedes mejorar y qué tan compatible es su estructura con los sistemas de seguimiento de candidatos.</p>
+    <div class="promo-points"><span>Estructura</span><span>Palabras clave</span><span>Logros y experiencia</span><span>Compatibilidad ATS</span></div>
+    <p><strong>Recibe un diagnóstico con observaciones y recomendaciones concretas.</strong></p>
+   </div>
+   <div class="promo-side">
+    <span class="old">Precio regular: consulta por nuestros servicios</span>
+    <span class="promo-kicker" style="color:#fff">Precio especial de lanzamiento</span>
+    <div class="amount">S/ 39</div>
+    <p class="fine">Un primer paso para presentar mejor tu experiencia profesional.</p>
+    <a class="btn" href="https://wa.me/51983188547?text=Hola%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20de%20mi%20CV%20por%20S%2F%2039." target="_blank" rel="noopener">Quiero diagnosticar mi CV →</a>
+    <span class="fine">No garantiza superar filtros ni obtener una entrevista. Recibirás una evaluación y recomendaciones de mejora.</span>
+   </div>
+  </div>
+ </div>
+</section>
+
 <section class="prob"><div class="w">
  <h2>Tener experiencia no siempre es suficiente.</h2>
  <ul><li>Tu CV no comunica lo que realmente sabes hacer.</li><li>Tu LinkedIn no refleja tu trayectoria.</li><li>Tienes experiencia, pero no sabes cómo diferenciarte.</li><li>Buscas nuevas oportunidades sin una estrategia clara.</li></ul>
@@ -153,6 +205,23 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
  <h2>Nuestros servicios</h2>
  <ul class="sv"><li class="row"><h3>CV Estratégico</h3><div><p>Tu experiencia ordenada alrededor de tus logros y de la posición que quieres.</p><span class="tg"><i>Redacción y diseño profesional</i><i>Optimización para sistemas ATS</i><i>Adaptación a cada posición</i></span></div><a href="#diagnostico" aria-label="Solicitar información sobre CV Estratégico">Solicitar información</a></li><li class="row"><h3>LinkedIn Pro</h3><div><p>Un perfil que cuente tu trayectoria y que los reclutadores correctos puedan encontrar.</p><span class="tg"><i>Titular y sección Acerca de</i><i>Experiencia, logros y palabras clave</i><i>Estrategia de visibilidad</i></span></div><a href="#diagnostico" aria-label="Solicitar información sobre LinkedIn Pro">Solicitar información</a></li><li class="row"><h3>Marca Personal</h3><div><p>Una narrativa propia que te diferencie y haga visible tu propuesta de valor.</p><span class="tg"><i>Diagnóstico de posicionamiento</i><i>Estrategia de contenido profesional</i><i>Presencia digital</i></span></div><a href="#diagnostico" aria-label="Solicitar información sobre Marca Personal">Solicitar información</a></li><li class="row"><h3>Interview Lab</h3><div><p>Llega a cada entrevista sabiendo qué decir y cómo decirlo.</p><span class="tg"><i>Simulaciones de entrevista</i><i>Preguntas frecuentes y estratégicas</i><i>Formato virtual y presencial</i></span></div><a href="#diagnostico" aria-label="Solicitar información sobre Interview Lab">Solicitar información</a></li><li class="row"><h3>Career Strategy</h3><div><p>Un plan para buscar con criterio, no al azar.</p><span class="tg"><i>Diagnóstico de perfil</i><i>Estrategia de búsqueda y oportunidades</i><i>Reposicionamiento y plan de crecimiento</i></span></div><a href="#diagnostico" aria-label="Solicitar información sobre Career Strategy">Solicitar información</a></li></ul>
 </div></section>
+
+
+<section class="express" id="servicios-express">
+ <div class="w">
+  <span class="promo-kicker">Soluciones puntuales</span>
+  <h2>Un impulso profesional, a tu medida.</h2>
+  <p class="express-intro">No necesitas contratar un paquete completo para empezar. Elige el servicio que necesitas hoy y avancemos desde ahí.</p>
+  <div class="express-grid">
+   <article class="express-card"><span class="mini">CV & documentos</span><h3>Diagnóstico ATS</h3><p>Revisión de estructura, palabras clave, claridad y compatibilidad del CV con sistemas ATS.</p><div class="price">S/ 39</div><a href="https://wa.me/51983188547?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20ATS%20de%20mi%20CV%20por%20S%2F%2039." target="_blank" rel="noopener">Solicitar diagnóstico →</a></article>
+   <article class="express-card"><span class="mini">CV & documentos</span><h3>Optimización de CV</h3><p>Mejoramos la redacción, organización y presentación de tu experiencia y logros.</p><div class="price">S/ 69</div><a href="https://wa.me/51983188547?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20optimizaci%C3%B3n%20de%20CV." target="_blank" rel="noopener">Mejorar mi CV →</a></article>
+   <article class="express-card"><span class="mini">CV & documentos</span><h3>CV desde cero</h3><p>Elaboración y diseño de un CV profesional a partir de tu experiencia y objetivos.</p><div class="price">S/ 99</div><a href="https://wa.me/51983188547?text=Hola%2C%20quiero%20crear%20mi%20CV%20desde%20cero." target="_blank" rel="noopener">Crear mi CV →</a></article>
+   <article class="express-card"><span class="mini">LinkedIn & marca personal</span><h3>LinkedIn optimizado</h3><p>Trabajamos tu titular, sección Acerca de, experiencia y palabras clave.</p><div class="price">S/ 89</div><a href="https://wa.me/51983188547?text=Hola%2C%20quiero%20optimizar%20mi%20perfil%20de%20LinkedIn." target="_blank" rel="noopener">Potenciar LinkedIn →</a></article>
+   <article class="express-card"><span class="mini">Desarrollo profesional</span><h3>Power Skills</h3><p>Sesión individual para identificar y fortalecer habilidades como comunicación, liderazgo, negociación y pensamiento crítico.</p><div class="price">S/ 49</div><a href="https://wa.me/51983188547?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20sesi%C3%B3n%20de%20Power%20Skills." target="_blank" rel="noopener">Desarrollar mis habilidades →</a></article>
+  </div>
+  <p class="express-note">¿Necesitas algo más específico? También podemos cotizar portada de LinkedIn, fotografía profesional y carta de presentación.</p>
+ </div>
+</section>
 
 <section style="padding-top:0"><div class="w">
  <h2>Dos caminos, una estrategia</h2>
@@ -182,10 +251,10 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
    <ul><li>Todo lo incluido en Starter</li><li>Optimización integral de LinkedIn</li><li>Titular y sección Acerca de</li><li>Optimización de experiencia y logros</li><li>Recomendaciones de posicionamiento profesional</li></ul>
    <a class="btn p" href="https://wa.me/51983188547?text=Hola%2C%20estoy%20interesado%20en%20contratar%20el%20plan%20PROFESSIONAL%20de%20Good%20Guys%20Career.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Contratar plan</a></article>
   <article class="plan"><h3>Executive</h3><p class="for">Para ejecutivos y profesionales senior que buscan reposicionarse y potenciar su marca personal.</p><p class="price" data-price="executive">Consultar precio</p>
-   <ul><li>Todo lo incluido en Professional</li><li>Diagnóstico de marca personal</li><li>Estrategia de posicionamiento ejecutivo</li><li>Preparación para entrevistas</li><li>Asesoría personalizada de comunicación y propuesta de valor</li></ul>
+   <ul><li>Todo lo incluido en Professional</li><li>Diagnóstico de marca personal</li><li>Estrategia de posicionamiento ejecutivo</li><li>Preparación para entrevistas</li><li>Power Skills: diagnóstico y desarrollo de competencias clave</li><li>Asesoría personalizada de comunicación y propuesta de valor</li></ul>
    <a class="btn g" href="https://wa.me/51983188547?text=Hola%2C%20estoy%20interesado%20en%20contratar%20el%20plan%20EXECUTIVE%20de%20Good%20Guys%20Career.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Contratar plan</a></article>
  </div>
- <p class="note">Al pulsar “Contratar plan” se abre WhatsApp con un mensaje listo para iniciar la conversación; allí coordinamos la contratación contigo.</p>
+ <p class="note">Precios de lanzamiento. Al pulsar “Contratar plan” se abre WhatsApp con un mensaje listo para iniciar la conversación; allí coordinamos la contratación contigo.</p>
 </div></section>
 
 <section class="dif"><div class="w">
@@ -204,7 +273,7 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
 </main>
 <footer><div class="w">
  <div><strong style="font:800 1.2rem var(--d)">GOOD GUYS CAREER</strong><p style="margin-top:8px;color:#c9c3b4">Una unidad especializada de GOOD GUYS ESTUDIO CREATIVO.</p></div>
- <ul><li><a href="#servicios">Servicios</a></li><li><a href="#metodo">Método</a></li><li><a href="#planes">Planes</a></li><li><a href="#diagnostico">Diagnóstico</a></li></ul>
+ <ul><li><a href="#servicios">Servicios</a></li><li><a href="#servicios-express">Servicios express</a></li><li><a href="#metodo">Método</a></li><li><a href="#planes">Planes</a></li><li><a href="#diagnostico">Diagnóstico</a></li></ul>
  <ul><li><a data-contact="instagram">Instagram</a></li><li><a data-contact="linkedin">LinkedIn</a></li><li><a data-contact="email">Correo</a></li><li><a data-contact="whatsapp">WhatsApp</a></li></ul>
  <small>© <span id="y"></span> Good Guys Estudio Creativo. Todos los derechos reservados.</small>
 </div></footer>
@@ -213,7 +282,7 @@ footer small{display:block;margin-top:40px;color:#8d887b;grid-column:1/-1}
    Precio vacío ("") muestra "Consultar precio". Ejemplo: "S/ 150". */
 window.GG = {
   whatsapp: "51983188547",
-  prices: { starter: "S/ 199", professional: "S/ 300", executive: "S/ 600" },
+  prices: { starter: "S/ 149", professional: "S/ 299", executive: "S/ 499" },
   social: {
     instagram: "",   // https://instagram.com/tuusuario
     linkedin: "",    // https://linkedin.com/company/...
